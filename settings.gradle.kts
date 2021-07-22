@@ -1,2 +1,9 @@
 rootProject.name = "TodoLar"
-include(":app")
+include(
+    ":app"
+)
+
+//library module
+include(
+    ":library:functional"
+)
