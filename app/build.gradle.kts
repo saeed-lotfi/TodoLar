@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -18,7 +20,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            minifyEnabled(false)
+            minifyEnabled(true)
             consumerProguardFiles("proguard-rules.pro")
         }
     }
@@ -41,5 +43,12 @@ dependencies {
     implementation(com.bilgiland.buildsrc.Libs.APPCOMPAT)
     implementation(com.bilgiland.buildsrc.Libs.MATERIAL_DESIGN)
     implementation(com.bilgiland.buildsrc.Libs.CONSTRAINT_LAYOUT)
+    implementation(com.bilgiland.buildsrc.Libs.COROUTINES)
+
+    implementation(com.bilgiland.buildsrc.Libs.HILT)
+    kapt(com.bilgiland.buildsrc.Libs.HILT_COMPILER)
+
     testImplementation(com.bilgiland.buildsrc.Libs.JUnit)
+
+    implementation(project(Modules.localStorage))
 }

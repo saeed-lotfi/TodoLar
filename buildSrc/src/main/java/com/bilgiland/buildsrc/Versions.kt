@@ -1,9 +1,5 @@
-import kotlin.String
-import org.gradle.plugin.use.PluginDependenciesSpec
-import org.gradle.plugin.use.PluginDependencySpec
-
 object Versions {
-    const val buildGradle: String = "4.2.2"
+    const val BUILD_GRADLE: String = "4.2.2"
 
     const val kotlin: String = "1.5.21"
 
@@ -17,5 +13,7 @@ object Versions {
 
     const val coreKtx: String = "1.6.0"
 
+    const val COROUTINES: String = "1.4.2"
 
+    const val HILT: String = "2.35"
 }
