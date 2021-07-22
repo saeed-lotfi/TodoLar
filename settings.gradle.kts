@@ -6,5 +6,6 @@ include(
 //library module
 include(
     ":library:functional",
-    ":library:datasource"
+    ":library:datasource",
+    ":library:mapper"
 )
