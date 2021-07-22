@@ -1,6 +1,7 @@
 rootProject.name = "TodoLar"
 include(
-    ":app"
+    ":app",
+    ":common:localstorage"
 )
 
 //library module

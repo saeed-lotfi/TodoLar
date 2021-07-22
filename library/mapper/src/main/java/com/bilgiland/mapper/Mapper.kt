@@ -1,6 +1,9 @@
 package com.bilgiland.mapper
 
-interface Mapper<I, O> {
+interface Mapper<First, Second> {
 
-    fun mapItem(input: I?): O
+    fun firstToSecond(firstItem: First): Second
+
+    fun secondToFirst(secondItem: Second): First
+
 }

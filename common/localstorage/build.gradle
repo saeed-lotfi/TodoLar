@@ -1,0 +1,20 @@
+import com.bilgiland.buildsrc.Libs
+
+apply from: "$rootDir/android-library.gradle"
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    def room_version = "2.3.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    implementation Libs.HILT
+    kapt Libs.HILT_COMPILER
+
+    implementation project(Modules.dataSource)
+    implementation project(Modules.functional)
+    implementation project(Modules.mapper)
+
+}
